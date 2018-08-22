@@ -1,0 +1,26 @@
+<div *ngIf="issue">
+  <h4>
+    Place Order
+  </h4>
+  <h5>
+    {{issue.name}}
+  </h5>
+  <form>
+    <div class="form-group">
+      <label for="supplier">Supplier</label>
+      <select class="form-control" id="supplier" name="supplier" [(ngModel)]="supplier">
+        <option id="supplier" *ngFor="let supplier of suppliers">{{supplier.name}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="grade">Grade</label>
+      <select class="form-control" id="grade" name="grade" [(ngModel)]="grade">
+        <option id="grade" *ngFor="let grade of grades">{{grade.name}}</option>
+      </select>
+    </div>   
+    <div class="form-group">
+      <label for="quantity">Quantity</label>
+      <input type="number" class="form-control" id="quantity" />
+    </div>
+  </form>
+</div>
